@@ -9,4 +9,7 @@
 
   <%= f.input :name, input_html: { autofocus: true } %>
   <%= f.submit class: "btn btn--secondary" %>
+  <%= link_to "Cancel",
+                  quotes_path,
+                  class: "btn btn--light" %>
 <% end %>
