@@ -4,9 +4,9 @@ require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
   setup do
+    login_as users(:accountant)
     @quote = Quote.ordered.first
   end
-
   test "Showing a quote" do
     visit quotes_path
     click_link @quote.name
